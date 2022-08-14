@@ -1,11 +1,10 @@
 :root{
-  --Soft-blue: hsl(215, 51%, 70%);
-  --Cyan: hsl(178, 100%, 50%);
-  --Cyan-transparent: hsla(178, 100%, 50%, 0.6);
-  --Very-dark-blue-mainBG: hsl(217, 54%, 11%);
-  --Very-dark-blue-cardBG: hsl(216, 50%, 16%);
-  --Very-dark-blue-line: hsl(215, 32%, 27%);
-  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Bright-pale-blue: hsla(245, 50%, 43%, 0.904);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
 }
 
 *{
@@ -14,6 +13,147 @@ padding: 0;
 box-sizing: border-box;
 }
 
+img{
+  max-width: 100%;
+}
 
-.attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+body{
+  background-color: var(--Desaturated-blue);
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: calc(100vh - 1px);
+}
+
+.container{
+  background-color: var(--Pale-blue);
+  max-width: 375px;
+  height: 85vh;
+  padding: 4rem 1.4rem;
+  margin: 1.7rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.container .box{
+  background-color: var(--Very-pale-blue);
+  border-radius: 1rem;
+  height: 70vh;
+}
+
+.container .main-img img{
+  border-radius: 1rem 1rem 0 0;
+}
+
+.container .summary{
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1rem;
+}
+
+.container .summary h1{
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.container .summary p{
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.3rem;
+  color: var(--Desaturated-blue);
+}
+
+.container .plan{
+  width: 90%;
+  margin: 20px auto;
+  background-color: var(--very-Pale-blue);
+  padding: 1rem;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(2,1fr);
+}
+
+.container .plan img{
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 40px;
+}
+
+.container .plan h4{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  font-size: 0.8rem;
+}
+
+.container .plan p{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-size: 13px;
+  color: var(--Desaturated-blue);
+}
+
+.container .plan a{
+  grid-column: 3/4;
+  grid-row: 1/3;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.container .plan a:hover{
+  color: var(--Bright-pale-blue);
+}
+
+.container .button{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 15vh;
+  gap: 16px;
+  padding-top: 20px;
+}
+
+.container .button button:first-child{
+  background-color: var(--Bright-blue);
+  color: var(--Very-pale-blue);
+  font-weight: 700;
+  font-family: "Red Hat Display";
+  border: none;
+  border-radius: 0.7rem;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  height: 70px;
+}
+
+.container .button button:first-child:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.container .button button:last-child{
+  background-color: transparent;
+  color: var(--Desaturated-blue);
+  font-weight: 900;
+  font-family: "Red Hat Display";
+  border: none;
+  border-radius: 0.5rem;
+  width: 90%;
+  height: 45px;
+}
+
+.container .button button:last-child:hover{
+  color: var(--Dark-blue);
+  cursor: pointer;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
