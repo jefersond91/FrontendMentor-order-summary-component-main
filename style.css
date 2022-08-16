@@ -1,5 +1,6 @@
 :root{
   --Pale-blue: hsl(225, 100%, 94%);
+  --transparent-Pale-blue: hsla(225, 100%, 94%, 0.233);
   --Bright-blue: hsl(245, 75%, 52%);
   --Bright-pale-blue: hsla(245, 50%, 43%, 0.904);
   --Very-pale-blue: hsl(225, 100%, 98%);
@@ -18,7 +19,7 @@ img{
 }
 
 body{
-  background-color: var(--Desaturated-blue);
+  background-color: var(--Pale-blue);
   font-family: "Red Hat Display", sans-serif;
   display: flex;
   flex-direction: column;
@@ -29,12 +30,10 @@ body{
 }
 
 .container{
-  background-color: var(--Pale-blue);
   max-width: 375px;
   max-height: 640px;
   padding: 4rem 1.4rem;
   margin: 1.7rem;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
 }
 
 .container .box{
@@ -68,8 +67,8 @@ body{
 
 .container .plan{
   width: 90%;
-  margin: 20px auto;
-  background-color: var(--very-Pale-blue);
+  margin: 10px auto;
+  background-color: var(--transparent-Pale-blue);
   padding: 1rem;
   border-radius: 5px;
   display: grid;
@@ -120,9 +119,9 @@ body{
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 15vh;
+  height: 13vh;
   gap: 16px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .container .button button:first-child{
